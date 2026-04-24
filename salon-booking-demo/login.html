@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login – SalonFlow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="app-shell">
+
+<header class="header">
+  <div class="header-title">SalonFlow – Login</div>
+  <nav class="header-nav">
+    <a href="index.html">Home</a>
+  </nav>
+</header>
+
+<!-- CUSTOMER LOGIN -->
+<div class="card" style="max-width:420px;">
+  <h1>Customer Login</h1>
+  <p style="margin-top:6px;">Use your preferred login method.</p>
+
+  <button class="btn btn-primary" style="width:100%; margin-top:16px;" onclick="customerLogin()">
+    Continue with Google
+  </button>
+
+  <button class="btn btn-outline" style="width:100%; margin-top:10px;" onclick="customerLogin()">
+    Continue with Apple
+  </button>
+
+  <p style="margin-top:16px; font-size:0.85rem; color:#6b7280;">
+    After login, we’ll verify your mobile number.
+  </p>
+</div>
+
+<!-- OWNER LOGIN -->
+<div class="card" style="max-width:420px; margin-top:24px;">
+  <h1>Owner Login</h1>
+
+  <div class="label">Email</div>
+  <input id="ownerEmail" class="input" placeholder="owner@example.com" />
+
+  <div class="label">Password</div>
+  <input id="ownerPassword" class="input" type="password" placeholder="••••••••" />
+
+  <button class="btn btn-primary" style="margin-top:12px;" onclick="ownerLogin()">
+    Login as Owner
+  </button>
+</div>
+
+</div>
+
+<script>
+  // Fake owner credentials
+  const OWNER_EMAIL = "owner@example.com";
+  const OWNER_PASSWORD = "password123";
+
+  function customerLogin() {
+    // Set role
+    localStorage.setItem("role", "customer");
+    // Go to mobile verification
+    window.location.href = "mobile-verify.html";
+  }
+
+  function ownerLogin() {
+    const email = document.getElementById("ownerEmail").value.trim();
+    const pwd = document.getElementById("ownerPassword").value.trim();
+
+    if (email === OWNER_EMAIL && pwd === OWNER_PASSWORD) {
+      localStorage

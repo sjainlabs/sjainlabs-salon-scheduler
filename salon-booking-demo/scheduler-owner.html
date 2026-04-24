@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Owner Scheduler – SalonFlow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="header">
+      <div class="header-title">SalonFlow – Owner</div>
+      <nav class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="scheduler-customer.html">Customer Booking</a>
+        <a href="chatbot.html">Chatbot</a>
+      </nav>
+    </header>
+
+    <div class="card">
+      <h1>Weekly Schedule</h1>
+      <p style="margin-top: 6px;">Manage availability, bookings, and blocked time.</p>
+      <div style="margin-top: 14px;">
+        <button class="btn btn-primary">Add Availability</button>
+        <button class="btn btn-outline" style="margin-left: 8px;">Block Time</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Mon 22</th>
+            <th>Tue 23</th>
+            <th>Wed 24</th>
+            <th>Thu 25</th>
+            <th>Fri 26</th>
+            <th>Sat 27</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>09:00</td>
+            <td><span class="badge badge-green">Available</span></td>
+            <td></td>
+            <td><span class="badge badge-blue">Emma – Styling</span></td>
+            <td></td>
+            <td><span class="badge badge-green">Available</span></td>
+            <td><span class="badge badge-red">Vacation</span></td>
+          </tr>
+          <tr>
+            <td>10:00</td>
+            <td><span class="badge badge-blue">Emily – Haircut</span></td>
+            <td><span class="badge badge-green">Available</span></td>
+            <td></td>
+            <td><span class="badge badge-green">Available</span></td>
+            <td></td>
+            <td><span class="badge badge-red">Vacation</span></td>
+          </tr>
+          <tr>
+            <td>12:00</td>
+            <td><span class="badge badge-red">Lunch</span></td>
+            <td><span class="badge badge-red">Blocked</span></td>
+            <td><span class="badge badge-red">Lunch</span></td>
+            <td><span class="badge badge-red">Lunch</span></td>
+            <td><span class="badge badge-red">Lunch</span></td>
+            <td><span class="badge badge-red">Vacation</span></td>
+          </tr>
+          <tr>
+            <td>14:00</td>
+            <td><span class="badge badge-green">Available</span></td>
+            <td><span class="badge badge-blue">Alex – Color</span></td>
+            <td><span class="badge badge-green">Available</span></td>
+            <td></td>
+            <td><span class="badge badge-blue">James – Color</span></td>
+            <td><span class="badge badge-red">Vacation</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Edit Availability (Mock Modal)</h2>
+      <div style="max-width: 360px; margin-top: 10px;">
+        <div class="label">Date</div>
+        <input class="input" type="date" value="2025-03-24" />
+        <div class="label">Start Time</div>
+        <input class="input" type="time" value="09:00" />
+        <div class="label">End Time</div>
+        <input class="input" type="time" value="11:00" />
+        <button class="btn btn-primary" style="margin-top: 8px;">Save Changes</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

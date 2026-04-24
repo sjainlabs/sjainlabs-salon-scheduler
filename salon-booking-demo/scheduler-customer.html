@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Customer Booking – SalonFlow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="header">
+      <div class="header-title">SalonFlow – Customer</div>
+      <nav class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="scheduler-owner.html">Owner Scheduler</a>
+        <a href="chatbot.html">Chatbot</a>
+      </nav>
+    </header>
+
+    <div class="card">
+      <h1>Book an appointment</h1>
+      <p style="margin-top: 6px;">Select a date and choose from available slots.</p>
+      <div style="margin-top: 12px; max-width: 320px;">
+        <div class="label">Date</div>
+        <input class="input" type="date" value="2025-03-24" />
+        <div class="label">Service</div>
+        <select class="input">
+          <option>Classic Haircut</option>
+          <option>Hair Styling</option>
+          <option>Color Treatment</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Available slots</h2>
+      <p style="margin-bottom: 10px;">Tap a slot to request a booking.</p>
+      <div class="chip-row">
+        <div class="chip">09:00 AM</div>
+        <div class="chip">10:00 AM</div>
+        <div class="chip">11:30 AM</div>
+        <div class="chip">02:00 PM</div>
+        <div class="chip">03:30 PM</div>
+      </div>
+      <button class="btn btn-primary" style="margin-top: 16px;">Confirm Selected Slot</button>
+    </div>
+
+    <div class="card">
+      <h2>Your upcoming appointments</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Service</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mar 24</td>
+            <td>10:00 AM</td>
+            <td>Classic Haircut</td>
+            <td><span class="badge badge-blue">Booked</span></td>
+          </tr>
+          <tr>
+            <td>Apr 02</td>
+            <td>02:30 PM</td>
+            <td>Color Treatment</td>
+            <td><span class="badge badge-green">Pending Approval</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

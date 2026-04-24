@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Auth Simulation – SalonFlow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+
+    <header class="header">
+      <div class="header-title">SalonFlow – Auth Simulation</div>
+      <nav class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="login-social.html">Social Login</a>
+        <a href="mobile-verify.html">Mobile Verify</a>
+      </nav>
+    </header>
+
+    <div class="card" style="max-width: 480px;">
+      <h1>Fake Login Simulation</h1>
+      <p style="margin-top: 6px;">Use these mock accounts to demonstrate the flow.</p>
+    </div>
+
+    <div class="card" style="max-width: 480px;">
+      <h2>Test Accounts</h2>
+
+      <p style="margin-top: 10px;"><strong>Approved Customer</strong></p>
+      <p>Email: emily.carter.demo@gmail.com</p>
+      <p>Mobile: <strong>+1 314 555 0192</strong></p>
+      <span class="badge badge-green">Approved</span>
+
+      <hr style="margin: 16px 0;" />
+
+      <p><strong>Pending Customer</strong></p>
+      <p>Email: james.lee.demo@gmail.com</p>
+      <p>Mobile: <strong>+1 636 555 2211</strong></p>
+      <span class="badge badge-blue">Pending Approval</span>
+
+      <hr style="margin: 16px 0;" />
+
+      <p><strong>Denied / Not Found</strong></p>
+      <p>Email: random.user.demo@gmail.com</p>
+      <p>Mobile: <strong>+1 555 000 9999</strong></p>
+      <span class="badge badge-red">Not Found</span>
+    </div>
+
+    <div class="card" style="max-width: 480px;">
+      <h2>Flow Demonstration</h2>
+
+      <p style="margin-top: 10px;"><strong>1. User logs in with Google</strong></p>
+      <div class="chat-bubble user">Logged in as: emily.carter.demo@gmail.com</div>
+
+      <p style="margin-top: 10px;"><strong>2. System asks for mobile number</strong></p>
+      <div class="chat-bubble bot">Please enter your mobile number to continue.</div>
+
+      <p style="margin-top: 10px;"><strong>3. User enters mobile</strong></p>
+      <div class="chat-bubble user">+1 314 555 0192</div>
+
+      <p style="margin-top: 10px;"><strong>4. Result</strong></p>
+      <div class="chat-bubble bot">
+        Mobile number found. You are an approved customer.  
+        <span class="badge badge-green">Access Granted</span>
+      </div>
+
+      <hr style="margin: 20px 0;" />
+
+      <p><strong>Denied Example</strong></p>
+      <div class="chat-bubble user">Logged in as: random.user.demo@gmail.com</div>
+      <div class="chat-bubble user">+1 555 000 9999</div>
+      <div class="chat-bubble bot">
+        This mobile number is not in our system.  
+        <span class="badge badge-red">Access Denied</span><br>
+        You may request access.
+      </div>
+
+      <button class="btn btn-outline" style="margin-top: 12px;">Request Access</button>
+
+      <hr style="margin: 20px 0;" />
+
+      <p><strong>Pending Example</strong></p>
+      <div class="chat-bubble user">Logged in as: james.lee.demo@gmail.com</div>
+      <div class="chat-bubble user">+1 636 555 2211</div>
+      <div class="chat-bubble bot">
+        Your account is pending owner approval.  
+        <span class="badge badge-blue">Pending</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

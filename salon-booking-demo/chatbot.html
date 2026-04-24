@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chatbot – SalonFlow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="header">
+      <div class="header-title">SalonFlow – Chatbot</div>
+      <nav class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="scheduler-owner.html">Owner Scheduler</a>
+        <a href="scheduler-customer.html">Customer Booking</a>
+      </nav>
+    </header>
+
+    <div class="card">
+      <h1>Booking assistant</h1>
+      <p style="margin-top: 6px;">A simple mock of the conversational flow customers will use to find a slot.</p>
+    </div>
+
+    <div class="chat-window">
+      <div class="chat-messages">
+        <div class="chat-bubble bot">
+          Hi! I can help you book an appointment. What day works best for you?
+        </div>
+        <div class="chat-bubble user">
+          This Friday.
+        </div>
+        <div class="chat-bubble bot">
+          Great. I see available slots at 10:00 AM, 11:30 AM, and 2:00 PM. Which one would you like?
+        </div>
+        <div class="chat-bubble user">
+          11:30 AM, please.
+        </div>
+        <div class="chat-bubble bot">
+          Done. I’ve requested an 11:30 AM Classic Haircut for this Friday. You’ll see it in your bookings once the owner approves.
+        </div>
+      </div>
+      <div class="chat-input-row">
+        <input class="chat-input" placeholder="Type a message (static demo)" />
+        <button class="btn btn-primary">Send</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

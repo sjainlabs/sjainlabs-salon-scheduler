@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Add Customer – SalonFlow Owner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+
+    <header class="header">
+      <div class="header-title">SalonFlow – Owner</div>
+      <nav class="header-nav">
+        <a href="index.html">Home</a>
+        <a href="scheduler-owner.html">Scheduler</a>
+        <a href="services.html">Services</a>
+        <a href="login.html">Customer Login</a>
+      </nav>
+    </header>
+
+    <div class="card">
+      <h1>Add New Customer</h1>
+      <p style="margin-top: 6px;">Add an existing customer by mobile number. They will be auto‑approved.</p>
+    </div>
+
+    <div class="card" style="max-width: 420px;">
+      <div class="label">Full Name</div>
+      <input class="input" placeholder="Sarah Miller" />
+
+      <div class="label">Mobile Number</div>
+      <input class="input" placeholder="+1 314 555 0192" />
+
+      <div class="label">Email (optional)</div>
+      <input class="input" placeholder="sarah@example.com" />
+
+      <button class="btn btn-primary" style="margin-top: 12px;">Add Customer</button>
+    </div>
+
+    <div class="card">
+      <h2>Recently Added Customers</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Emily Carter</td>
+            <td>+1 636 555 2211</td>
+            <td>emily@example.com</td>
+            <td><span class="badge badge-green">Approved</span></td>
+          </tr>
+          <tr>
+            <td>James Lee</td>
+            <td>+1 314 555 8822</td>
+            <td>—</td>
+            <td><span class="badge badge-green">Approved</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</body>
+</html>

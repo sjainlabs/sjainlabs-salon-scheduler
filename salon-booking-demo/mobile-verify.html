@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Verify Mobile – SalonFlow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="app-shell">
+
+<header class="header">
+  <div class="header-title">SalonFlow – Verify Mobile</div>
+  <nav class="header-nav">
+    <a href="index.html">Home</a>
+  </nav>
+</header>
+
+<div class="card" style="max-width: 420px;">
+  <h1>Verify your mobile number</h1>
+  <p style="margin-top: 6px;">We authorize customers based on known mobile numbers.</p>
+
+  <div class="label">Mobile Number</div>
+  <input id="mobileInput" class="input" placeholder="+1 314 555 0192" />
+
+  <button class="btn btn-primary" style="margin-top: 12px;" onclick="checkAuth()">
+    Check Authorization
+  </button>
+</div>
+
+</div>
+
+<script>
+  // Mocked customer database
+  const customers = {
+    "+13145550192": "approved",  // Emily – approved customer
+    "+16365552211": "pending",   // James – pending approval
+    "+15550009999": "denied"     // Random user – not found
+  };
+
+  function checkAuth() {
+    const input = document.getElementById("mobileInput").value.trim();
+
+    if (!input) {
+      alert("Please enter a mobile number");
+      return;
+    }
+
+    const status = customers[input];
+
+    if (status === "approved") {
+      // Approved customers go ONLY to customer flow
+      window.location.href = "scheduler-customer.html";
+    } 
+    else if (status === "pending") {
+      window.location.href = "pending.html";
+    } 
+    else {
+      window.location.href = "request-access.html";
+    }
+  }
+</script>
+
+</body>
+</html>
