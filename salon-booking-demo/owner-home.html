@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Owner Dashboard – SalonFlow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="app-shell">
+
+<header class="header">
+  <div class="header-title">SalonFlow – Owner Dashboard</div>
+  <nav class="header-nav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="scheduler-customer.html">Customer Booking</a>
+    <a href="chatbot.html">Chatbot</a>
+  </nav>
+</header>
+
+<!-- KPI CARDS -->
+<div class="grid grid-3" style="margin-bottom: 20px;">
+
+  <div class="card">
+    <h2>Total Customers</h2>
+    <p style="font-size: 2rem; font-weight: 700; margin-top: 6px;">128</p>
+  </div>
+
+  <div class="card">
+    <h2>Pending Requests</h2>
+    <p style="font-size: 2rem; font-weight: 700; margin-top: 6px;">3</p>
+  </div>
+
+  <div class="card">
+    <h2>Today’s Appointments</h2>
+    <p style="font-size: 2rem; font-weight: 700; margin-top: 6px;">5</p>
+  </div>
+
+  <div class="card">
+    <h2>Free Slots Today</h2>
+    <p style="font-size: 2rem; font-weight: 700; margin-top: 6px;">4</p>
+  </div>
+
+  <div class="card">
+    <h2>Blocked Time Today</h2>
+    <p style="font-size: 2rem; font-weight: 700; margin-top: 6px;">1 hr</p>
+  </div>
+
+  <div class="card">
+    <h2>No‑Show Risk</h2>
+    <p style="font-size: 2rem; font-weight: 700; margin-top: 6px;">Low</p>
+  </div>
+
+</div>
+
+<!-- ALERTS -->
+<div class="card">
+  <h2>Alerts</h2>
+  <ul style="margin-top: 10px; padding-left: 18px; color: #4b5563;">
+    <li>3 pending customer requests need review</li>
+    <li>1 appointment requires rescheduling</li>
+    <li>Blocked time today: 12:00 PM – 1:00 PM</li>
+  </ul>
+</div>
+
+<!-- QUICK ACTIONS -->
+<div class="card">
+  <h2>Quick Actions</h2>
+  <div style="margin-top: 12px;">
+    <a href="owner-add-appointment.html" class="btn btn-primary">Add Appointment</a>
+    <a href="owner-availability.html" class="btn btn-outline" style="margin-left: 8px;">Block Time</a>
+    <a href="add-customer.html" class="btn btn-outline" style="margin-left: 8px;">Add Customer</a>
+    <a href="owner-approvals.html" class="btn btn-outline" style="margin-left: 8px;">Pending Requests</a>
+  </div>
+</div>
+
+<!-- UPCOMING APPOINTMENTS -->
+<div class="card">
+  <h2>Upcoming Appointments</h2>

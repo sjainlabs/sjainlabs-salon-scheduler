@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Add Appointment – SalonFlow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<script>
+  if (localStorage.getItem("role") !== "owner") {
+    window.location.href = "login.html";
+  }
+</script>
+
+<div class="app-shell">
+
+<header class="header">
+  <div class="header-title">Add Appointment</div>
+  <nav class="header-nav">
+    <a href="owner-home.html">Dashboard</a>
+    <a href="scheduler-owner.html">Scheduler</a>
+  </nav>
+</header>
+
+<div class="card" style="max-width:420px;">
+  <h1>New Appointment</h1>
+
+  <div class="label">Customer</div>
+  <select class="input">
+    <option>Emily Carter</option>
+    <option>James Lee</option>
+    <option>Sarah Miller</option>
+  </select>
+
+  <div class="label">Service</div>
+  <select class="input">
+    <option>Classic Haircut</option>
+    <option>Hair Styling</option>
+    <option>Color Treatment</option>
+  </select>
+
+  <div class="label">Date</div>
+  <input class="input" type="date" />
+
+  <div class="label">Time</div>
+  <input class="input" type="time" />
+
+  <div class="label">Notes</div>
+  <textarea class="input" style="height:80px;"></textarea>
+
+  <a href="scheduler-owner.html">
+    <button class="btn btn-primary" style="margin-top:12px;">Save Appointment</button>
+  </a>
+</div>
+
+</div>
+</body>
+</html>

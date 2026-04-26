@@ -7,59 +7,46 @@
 </head>
 
 <body>
-<div class="app-shell">
-
-<header class="header">
-  <div class="header-title">SalonFlow – Verify Mobile</div>
-  <nav class="header-nav">
-    <a href="index.html">Home</a>
-  </nav>
-</header>
-
-<div class="card" style="max-width: 420px;">
-  <h1>Verify your mobile number</h1>
-  <p style="margin-top: 6px;">We authorize customers based on known mobile numbers.</p>
-
-  <div class="label">Mobile Number</div>
-  <input id="mobileInput" class="input" placeholder="+1 314 555 0192" />
-
-  <button class="btn btn-primary" style="margin-top: 12px;" onclick="checkAuth()">
-    Check Authorization
-  </button>
-</div>
-
-</div>
-
 <script>
-  // Mocked customer database
+  if (localStorage.getItem("role") !== "customer") {
+    window.location.href = "login.html";
+  }
+
   const customers = {
-    "+13145550192": "approved",  // Emily – approved customer
-    "+16365552211": "pending",   // James – pending approval
-    "+15550009999": "denied"     // Random user – not found
+    "emily.carter@gmail.com": "+13145550192",
+    "james.lee@gmail.com": "+16365552211"
   };
 
-  function checkAuth() {
-    const input = document.getElementById("mobileInput").value.trim();
+  function verifyMobile() {
+    const email = localStorage.getItem("email");
+    const expected = customers[email];
+    const entered = document.getElementById("mobileInput").value.trim();
 
-    if (!input) {
-      alert("Please enter a mobile number");
-      return;
-    }
-
-    const status = customers[input];
-
-    if (status === "approved") {
-      // Approved customers go ONLY to customer flow
+    if (entered === expected) {
       window.location.href = "scheduler-customer.html";
-    } 
-    else if (status === "pending") {
-      window.location.href = "pending.html";
-    } 
-    else {
+    } else {
       window.location.href = "request-access.html";
     }
   }
 </script>
 
+<div class="app-shell">
+
+<header class="header">
+  <div class="header-title">Verify Mobile</div>
+</header>
+
+<div class="card" style="max-width:420px;">
+  <h1>Verify your mobile number</h1>
+
+  <div class="label">Mobile Number</div>
+  <input id="mobileInput" class="input" placeholder="+1 314 555 0192" />
+
+  <button class="btn btn-primary" style="margin-top:12px;" onclick="verifyMobile()">
+    Continue
+  </button>
+</div>
+
+</div>
 </body>
 </html>

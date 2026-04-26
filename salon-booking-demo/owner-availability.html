@@ -5,13 +5,26 @@
   <title>Set Availability – SalonFlow</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+<script>
+  if (localStorage.getItem("role") !== "owner") {
+    window.location.href = "login.html";
+  }
+</script>
+
 <div class="app-shell">
 
-<header class="header"><div class="header-title">SalonFlow – Availability</div></header>
+<header class="header">
+  <div class="header-title">Set Availability</div>
+  <nav class="header-nav">
+    <a href="owner-home.html">Dashboard</a>
+    <a href="scheduler-owner.html">Scheduler</a>
+  </nav>
+</header>
 
 <div class="card" style="max-width:420px;">
-  <h1>Set your availability</h1>
+  <h1>Working Hours</h1>
 
   <div class="label">Start Time</div>
   <input class="input" type="time" value="09:00" />
@@ -19,8 +32,8 @@
   <div class="label">End Time</div>
   <input class="input" type="time" value="17:00" />
 
-  <a href="owner-onboarding-complete.html">
-    <button class="btn btn-primary" style="margin-top:12px;">Save & Continue</button>
+  <a href="owner-home.html">
+    <button class="btn btn-primary" style="margin-top:12px;">Save</button>
   </a>
 </div>
 

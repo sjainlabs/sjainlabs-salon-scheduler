@@ -2,19 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Customer Approvals – SalonFlow</title>
+  <title>Pending Requests – SalonFlow</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+<script>
+  if (localStorage.getItem("role") !== "owner") {
+    window.location.href = "login.html";
+  }
+</script>
+
 <div class="app-shell">
 
 <header class="header">
-  <div class="header-title">SalonFlow – Approvals</div>
+  <div class="header-title">Pending Requests</div>
+  <nav class="header-nav">
+    <a href="owner-home.html">Dashboard</a>
+    <a href="scheduler-owner.html">Scheduler</a>
+  </nav>
 </header>
 
 <div class="card">
   <h1>Pending Customer Requests</h1>
-  <p style="margin-top:6px;">Approve or deny new customer access.</p>
 </div>
 
 <div class="card">
@@ -37,22 +47,9 @@
           <button class="btn btn-outline" style="margin-left:6px;">Deny</button>
         </td>
       </tr>
-      <tr>
-        <td>John Carter</td>
-        <td>+1 555 111 8822</td>
-        <td>New customer request.</td>
-        <td>
-          <button class="btn btn-primary">Approve</button>
-          <button class="btn btn-outline" style="margin-left:6px;">Deny</button>
-        </td>
-      </tr>
     </tbody>
   </table>
 </div>
-
-<a href="owner-availability.html">
-  <button class="btn btn-primary" style="margin-top:16px;">Continue</button>
-</a>
 
 </div>
 </body>

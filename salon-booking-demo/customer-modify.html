@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Modify Appointment – SalonFlow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<script>
+  if (localStorage.getItem("role") !== "customer") {
+    window.location.href = "login.html";
+  }
+</script>
+
+<div class="app-shell">
+
+<header class="header">
+  <div class="header-title">Modify Appointment</div>
+</header>
+
+<div class="card" style="max-width:420px;">
+  <h1>Modify Appointment</h1>
+
+  <p><strong>Current:</strong> Mar 24 · 10:00 AM · Haircut (Female)</p>
+
+  <div class="label">New Date</div>
+  <input class="input" type="date" />
+
+  <div class="label">New Time</div>
+  <input class="input" type="time" />
+
+  <a href="scheduler-customer.html">
+    <button class="btn btn-primary" style="margin-top:12px;">Save Changes</button>
+  </a>
+</div>
+
+</div>
+</body>
+</html>
